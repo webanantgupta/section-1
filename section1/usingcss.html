@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using CSS</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
         h1{
             text-align: center;
             text-decoration: overline #57ba05 2px;
+            color: #985c08;
+        }
+        .my{
+            background-color: #e43d7d;
+            color: #dcc623;
+
+        }
+        #id1{
+            color: #0d0e0e;
+            font-size: 25px;
+            background-color: rgb(137, 191, 238);
         }
     </style>
 </head>
 <body>
-    <p style="font-size: 25px; color:#a3184d;">Inline CSS is used to style individual elements</p>
+    <!--this is inline CSS-->
+    <p style="font-size: 25px; color:#2236e8;">Inline CSS is used to style individual elements</p>
     <h1>Internal CSS is used to style multiple tage at once</h1>
-    <h1>Name selector are used to select elements by tag name</h1>
+    <h1 class="my">Name selector are used to select elements by tag name</h1>
+    <h3 class="my">Class selector are used to select elements by thier class name</h3>
+
+    <p id="id1">Id selectors are used by their id name</p>
+    <button class="btn">click me</button>
 </body>
 </html>
