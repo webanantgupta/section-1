@@ -4,31 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="styleadmission.css">
+    
   </head>
   <body>
+    <div class="outer-div">
     <form>
       <label for="stuname">Student Name</label>
       <input id="stuname" type="text" placeholder="Name" required />
 
       <label for="semail">Student Email</label>
       <input id="semail" type="email" placeholder="Email" required />
-
+      
       <label for="contact">Contact Number</label>
       <input id="contact" type="number" placeholder="Phone number" required />
-
+      
       <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" placeholder="Enter Dob" />
-
+      <input type="date" id="dob" placeholder="Enter Dob" /><br>
+    
       <label for="add">Address</label>
       <textarea id="add" rows="2" cols="30"></textarea>
-
+      
       <label for="gender">Gender</label>
       <input type="radio" name="gender" />Male
       <input type="radio" name="gender" />Female
-
+      
       <input type="checkbox" id="check" />
       <label for="check">I have terms and conditions</label>
       <button>Submit</button>
     </form>
+  </div>
   </body>
 </html>

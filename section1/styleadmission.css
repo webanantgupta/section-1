@@ -1,0 +1,32 @@
+*{
+    font-family: Roboto;
+}
+.outer-div{
+    border: 2px solid black;
+    padding: 10px 20px;
+    box-shadow: -5px -2px 20px 0px #f2fe0ae6;
+    border-radius: 10px;
+    width: 20%;
+    background-color: aliceblue;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg);
+    background-size: cover;
+}
+#semail{
+    margin-bottom: 20px;
+   }
+#contact{
+    margin-bottom: 20px;
+}
+#add{
+    margin-bottom: 20px;
+}
+#stuname{
+    margin-bottom: 20px;
+   }
+   
