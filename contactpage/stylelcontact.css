@@ -1,0 +1,41 @@
+*{
+    font-family: Ubuntu;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(250deg,rgba(236, 236, 28, 0.516),rgba(238, 52, 83, 0.511)),url(https://png.pngtree.com/png-clipart/20191123/original/pngtree-abstract-design-background-png-image_5194020.jpg);
+    background-size: cover;
+
+}
+.outer-div{
+    border: 2px solid black;
+    width: 70%;
+    background-color: bisque;
+}
+
+.margin{
+    margin-top: 10px;
+    padding: 10px 10px;
+}
+form{
+    padding: 10px;
+}
+h1{
+    padding: 10px;
+}
+#btn{
+    background-color: #0276FF;;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+#btn:hover{
+   color: #5ca0ed;
+   color: black;
+
+}
