@@ -6,7 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(250deg,rgba(236, 236, 28, 0.516),rgba(238, 52, 83, 0.511)),url(https://png.pngtree.com/png-clipart/20191123/original/pngtree-abstract-design-background-png-image_5194020.jpg);
+    background-image: linear-gradient(250deg,#f0d342b3,rgba(238, 52, 83, 0.511)),url(https://png.pngtree.com/png-clipart/20191123/original/pngtree-abstract-design-background-png-image_5194020.jpg);
     background-size: cover;
 
 }
