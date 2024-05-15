@@ -77,6 +77,40 @@
             text-align: center;
             font-size: 25px;
         }
+        .content{
+            text-align: center;
+            font-size: 25px;
+            /* border: 2px solid black; */
+            color:var(--theme-color);
+            padding: 50px 200px;
+        }
+        .content:hover{
+            color:azure;
+            background-color: var(--theme-color);
+            cursor: pointer;
+        }
+        .footer-container{
+            padding: 50px 200px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr ;
+        }
+         .footer-description{
+         padding: 0px 50px;
+        }
+        /* .footer-links-group{
+            border: 2px solid yellow;
+        }  */
+        .footer-link{
+            display: block;
+            text-decoration: none;
+            margin-bottom: 80px;
+            color: black;
+            font-weight: bold;
+        }
+        footer{
+            background-color: var(--theme-color);
+            color:white;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -113,6 +147,36 @@
                 </div>    
             </section>
 
+            <section class="section section-main">
+                <div  class="content">
+                 <h4 class="section-title">Featured Content</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta, repellendus corrupti placeat ducimus nostrum accusantium enim voluptate adipisci eum nam. In asperiores possimus modi quia et. Sapiente, maxime porro.</p>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/025/220/125/small_2x/picture-a-captivating-scene-of-a-tranquil-lake-at-sunset-ai-generative-photo.jpg" alt="image">
+                </div>
+            </div>
+            </section>
+
+           <footer>
+            <div class="footer-container">
+                <div class="footer-description">
+                    <h4>Company Name</h4>
+                    <p>&copy; 2024</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae illo eveniet, fugit veniam possimus similique?</p>
+                </div>
+                <div class="footer-links-group">
+                    <a href=" " class="footer-link"><i class="fa-brands fa-facebook-f"></i> facebook</a>
+                    <a href="" class="footer-link"><i class="fa-brands fa-linkedin"></i> linkdin</a>
+                    <a href="" class="footer-link" ><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="" class="footer-link"><i class="fa-brands fa-github"></i> Github</a>
+                </div>
+                <div class="footer-links-group">
+                    <a href=" " class="footer-link"><i class="fa-brands fa-facebook-f"></i> facebook</a>
+                    <a href="" class="footer-link"><i class="fa-brands fa-linkedin"></i>  linkdin</a>
+                    <a href="" class="footer-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="" class="footer-link"><i class="fa-brands fa-github"></i> Github</a>
+                </div>
+            </div>
+           </footer>
 
         </main>
         <footer>
