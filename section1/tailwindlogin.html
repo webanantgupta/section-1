@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html{
+            color-scheme: light dark ;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex justify-center items-center min-h-screen bg-slate-300 dark:bg-slate-900 px-10">
+        <div class="bg-white dark:bg-slate-800 w-full md:w-1/2 xl:1/4 rounded p-10 shadow-xl">
+            <h1 class="text-center text-2xl">Brand Name</h1>
+                <h4 class="text-center text-slate-500">Login form</h4>
+                <form class="my-5 ">
+
+                    <label>Email Address</label>
+                    <input class="  dark:bg-slate-900 text-input border-2 block mb-3 w-full px-3 py-2 rounded-md" type="email">
+        
+                    <label>Password</label>
+                    <input class=" dark:bg-slate-900 text-input border-2 block mb-3 w-full px-5 py-2 rounded-md" type="password">
+                     
+                    <a class="block my-2 " href="">Forgot Password?</a>
+                    <button class="bg-cyan-600 hover:bg-cyan-400 px-5 py-2 rounded-md w-full">Submit</button>
+
+                    <a class="mt-8 block text-center font-bold dark:text-slate-500" href="">Create New Account</a>
+        
+                </form>
+        </div>
+    </div>
+</body>
+</html>
