@@ -36,3 +36,32 @@ console.log(price.slice(1));
 console.log(price.slice(2));
 console.log(price.slice(1,-2));
 console.log(price.slice(-2));
+
+
+
+
+// adding new elements
+//push to add element in last of array
+movies.push("The Dark Knight");
+console.log(movies);
+
+
+//to add element in first place of array
+movies.unshift("The Godfather");
+console.log(movies);
+
+
+// removing elements 
+movies.pop();          // remove last element in array
+movies.shift();       // remove first element in array
+console.log(movies);
+
+
+
+// movies.splice(3,2);  // it will remove 2 elements starting from index 3 
+
+//movies.splice(3,2, "Batman","Superman");        // it will also add the elements 
+
+
+movies.splice(3,0, "Batman","Superman");        // it will automatically add the elements in the given index
+console.log(movies);
