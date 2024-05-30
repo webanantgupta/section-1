@@ -87,7 +87,7 @@ console.log(smartPhoneList[3].price);
 
 // filter smart phone with price lower than 30000
 console.log("-------");
-const budget = smartPhoneList.filter( ( n) => { return n.price < 30000})
+const budget = smartPhoneList.filter( ( n) => { return n.price < 30000});
 console.log(budget);
 
 
@@ -99,8 +99,29 @@ console.log(br);
 
 // print smart phone with color solid blue
 console.log("-------");
-const colour = smartPhoneList.filter( (n) => { return n.color.includes("solid blue")})
+const colour = smartPhoneList.filter( (n) => { return n.color.includes("solid blue")});
 console.log(colour);
 
 
 console.log(["a","b","c"].includes("d"));
+
+
+                                   //map
+
+                                   // to take out all brand
+console.log("map");
+const brand = smartPhoneList.map((n) => { return n.brand});
+console.log(brand);
+console.log(new Set(brand));   //to remove duplicates
+console.log(Array.from(new Set(brand)));    //gives output in array
+
+
+const price = smartPhoneList.map((n) => {return n.price - n.price/10});
+console.log(price);
+
+
+// const out = smartPhoneList.map((n) => { return n.brand  + " " + n.model});
+// console.log(out);
+
+const out = smartPhoneList.map((n) => { return `${n.brand}  ${n.model}`});    //string  interpolation
+console.log(out);
