@@ -1,9 +1,11 @@
 import React from 'react'
-
+import classes from "./login.module.css";
 const Login = () => {
   return (
     <div>
         <h1> Login Page</h1>
+        <button className='my-btn'>Submit</button>           
+        <button className={ classes.btn}>Another button</button>
     </div>
   )
 }
