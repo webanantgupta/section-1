@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -10,13 +11,13 @@ const Navbar = () => {
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
-            <a
+            <Link
               className="flex-none text-xl font-semibold text-white"
-              href="#"
+              href="/"
               aria-label="Brand"
             >
               Brand
-            </a>
+            </Link>
             <div className="sm:hidden">
               <button
                 type="button"
@@ -64,31 +65,31 @@ const Navbar = () => {
             className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
           >
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-end py-2 md:py-0 sm:ps-7">
-              <a
+              <Link
                 className="py-3 ps-px sm:px-3 font-medium text-white"
                 href="#"
                 aria-current="page"
               >
                 Landing
-              </a>
-              <a
+              </Link>
+              <Link
                 className="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white"
                 href="#"
               >
                 Account
-              </a>
-              <a
+              </Link>
+              <Link
                 className="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white"
                 href="#"
               >
                 Work
-              </a>
-              <a
+              </Link>
+              <Link
                 className="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white"
                 href="#"
               >
                 Blog
-              </a>
+              </Link>
               <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] py-3 ps-px sm:px-3">
                 <button
                   type="button"
@@ -175,7 +176,7 @@ const Navbar = () => {
               </div>
               <a
                 className="flex items-center gap-x-2 font-medium text-white/80 hover:text-white sm:border-s sm:border-white/30 py-2 md:py-0 sm:my-6 sm:ps-6"
-                href="#"
+                href="/login"
               >
                 <svg
                   className="flex-shrink-0 size-4"

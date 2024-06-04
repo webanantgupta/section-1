@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PrelineScript from "@/components/prelineScript";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
         {/* to show in all the pages */}
 
         <Navbar />
+        
         {children}
+        <Footer />
         <PrelineScript/>
         </body>
         
