@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PrelineScript from "@/components/prelineScript";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +19,12 @@ export default function RootLayout({ children }) {
         {/* to show in all the pages */}
 
         <Navbar />
-        
+        <Toaster position="top-right" />
         {children}
         <Footer />
-        <PrelineScript/>
-        </body>
-        
+        <PrelineScript />
+      </body>
+
     </html>
   );
 }
