@@ -29,10 +29,8 @@ const TodoList = () => {
 
             setTaskList([newTask, ...taskList]);
             toast.success("Task added successfully");
-
-
-
-
+             
+            
             e.target.value = '';
         }
 
@@ -53,13 +51,15 @@ const TodoList = () => {
         }
 
     }
+
+
     return (
         <div className='mx-64'>
             <h1 className='text-3xl font-bold text-center my-5'>TodoList</h1>
             <div className='border-2 shadow-lg rounded-lg p-5'>
-                <input onKeyDown={addNewTodo} type="text" className='w-full  border border-blue-500 px-4 py-2 rounded-md' placeholder='Add a new todo' />
+                <input onKeyDown={addNewTodo} type="text" className='w-full border border-blue-500 px-4 py-2 rounded-md' placeholder='Add a new todo' />
 
-                <div className='p-4'>
+                <div className='p-4 h-[50vh] overflow-auto'>
 
                     {
                         taskList.map((obj, index) => {
