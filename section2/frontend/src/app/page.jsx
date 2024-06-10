@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from "./vercel.svg"
+import { Button } from '@mantine/core';
 
 const Home = () => {
   return (
@@ -14,6 +15,8 @@ const Home = () => {
 
       {/* when file is outside public folder */}
       <img src={logo.src} alt="" />
+
+      <Button>Mantine Button</Button>
     </div>
   )
 }

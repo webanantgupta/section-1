@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import PrelineScript from "@/components/prelineScript";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import '@mantine/core/styles.css';
+import { MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +22,9 @@ export default function RootLayout({ children }) {
 
         <Navbar />
         <Toaster position="top-right" />
-        {children}
+        <MantineProvider>
+          {children}
+          </MantineProvider>
         <Footer />
         <PrelineScript />
       </body>
