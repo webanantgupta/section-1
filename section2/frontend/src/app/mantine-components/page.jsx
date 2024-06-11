@@ -32,7 +32,7 @@ const MantineComponents = () => {
 
             <Button variant='outline' color='grape' onClick={open}>Open Drawer</Button>
             <Drawer opened={opened} position='bottom' onClose={close}>
-            overLayProps={[backgroundOpacity: 0.5, blur:4]}
+            overlayProps={{backgroundOpacity: 0.5, blur:4}}
                 <h2>Drawer Content</h2>
             </Drawer>
         </Container>
