@@ -10,7 +10,10 @@ const port = 5000;
 
 
 // middle ware
-app.use("/use", userRouter);
+
+app.use(express.json()); // convert json to js
+app.use("/user", userRouter);
+
 
 // route or endpoint
 app.get("/", (req,res) => {
