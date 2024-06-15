@@ -1,5 +1,6 @@
 const express = require("express");  //importing express
-const userRouter = require("./routers/userRouter")
+const userRouter = require("./routers/userRouter");
+const feedRouter = require("./routers/feedRouter");
 
 // initializing express
 const app = express();
@@ -13,6 +14,8 @@ const port = 5000;
 
 app.use(express.json()); // convert json to js
 app.use("/user", userRouter);
+app.use("/feed", feedRouter);
+
 
 
 // route or endpoint

@@ -1,5 +1,5 @@
 const express =require("express");
-const Model = require("../models/userModel");
+const Model = require("../models/feedModel");
 
 // initalizing router
 const router = express.Router();
@@ -17,7 +17,7 @@ router.post("/add", (req,res) =>{
         console.log(err);
         res.status(500).json(err);
     })
-   // res.send("response from user");
+   // res.send("response from feed");
 });
 
 router.get("/getall", (req,res) =>{
