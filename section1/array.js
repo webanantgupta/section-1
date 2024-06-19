@@ -34,6 +34,7 @@ console.log(movies.slice(1));
 const price = "₹536.872/-";
 console.log(price.slice(1));
 console.log(price.slice(2));
+console.log("-------------------");
 console.log(price.slice(1,-2));
 console.log(price.slice(-2));
 
