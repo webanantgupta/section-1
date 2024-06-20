@@ -2,6 +2,8 @@
 import { useFormik } from 'formik';
 import React from 'react'
 import * as Yup from 'yup';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 
 
@@ -34,10 +36,21 @@ const signup = () => {
 
     onSubmit: ( values, {resetForm}) => {
      
-     setTimeout(()=>{
-      console.log(values);
-      resetForm();
-     },3000);
+    //  setTimeout(()=>{
+       console.log(values);
+
+
+    //   resetForm();
+    //  },3000);
+   axios.post("http://localhost:5000/user/add", values)
+   .then((result) => {
+    console.log(result.status);
+    toast.success("User Registration successfully");
+    resetForm();
+   }).catch((err) => {
+    console.log(err);
+    toast.error("User Registration failed");
+   });
     },
     validationSchema: SignupSchema
   });

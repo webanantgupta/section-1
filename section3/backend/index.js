@@ -2,6 +2,8 @@ const express = require("express");  //importing express
 const userRouter = require("./routers/userRouter");
 const feedRouter = require("./routers/feedRouter");
 
+const cors = require("cors");
+
 // initializing express
 const app = express();
 
@@ -11,6 +13,12 @@ const port = 5000;
 
 
 // middle ware
+
+
+// handling cors
+app.use(cors({
+    origin: ["http://localhost:3000"]
+}));
 
 app.use(express.json()); // convert json to js
 app.use("/user", userRouter);
