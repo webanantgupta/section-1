@@ -1,51 +1,57 @@
-const express =require("express");
+const express = require("express");
 const Model = require("../models/userModel");
 
 // initalizing router
 const router = express.Router();
 
+router.post("/add", (req, res) => {
+  console.log(req.body);
 
-router.post("/add", (req,res) =>{
-
-    console.log(req.body);
-
-    new Model(req.body).save()
+  new Model(req.body)
+    .save()
     .then((result) => {
-       res.status(200).json(result);
+      res.status(200).json(result);
     })
     .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
+    });
+  // res.send("response from user");
+});
+
+router.get("/getall", (req, res) => {
+  // res.send("response from user get all");
+  Model.find()
+    .then((result) => {
+      res.status(200).json(result);
     })
-   // res.send("response from user");
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
-
-router.get("/getall", (req,res) =>{
-    res.send("response from user get all");
-});
-
 
 // how to do  update operation
-router.put("/update/:id", (req,res) => {
-    Model.findByIdAndUpdate(req.params.id, req.body,{ new : true})
-    .then((result)=>{
-        res.status(200).json(result);
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
+router.put("/update/:id", (req, res) => {
+  Model.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
-
-
 router.delete("/delete/:id", () => {
-    Model.findByIdAndDelete(req.params.id)
-    .then((result) =>{
-        res.status(200).json(result);
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
+  Model.findByIdAndDelete(req.params.id)
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
-})
+});
 // exporting this route
 module.exports = router;
