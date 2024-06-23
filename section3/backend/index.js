@@ -17,7 +17,7 @@ const port = 5000;
 
 // handling cors
 app.use(cors({
-    origin: ["http://localhost:3000"]
+    origin: ["http://localhost:5000"]
 }));
 
 app.use(express.json()); // convert json to js
