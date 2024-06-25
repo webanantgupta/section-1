@@ -29,6 +29,16 @@ const updatUser = () => {
   // function
   const submitForm =(values) => {
    console.log(values);
+
+   axios.put("http://localhost5000/user/update/" +id, values)
+   .then((result) => {
+    if(result.status === 200){
+      toast.success("User updated successfully");
+    }
+   }).catch((err) => {
+    toast.error("Failed to update user");
+    console.log(err);
+   });
   }
   return (
     <div className='max-w-2xl mx-auto py-5 '>
@@ -50,7 +60,7 @@ const updatUser = () => {
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
-                  onChange={updateForm.handleSubmit}
+                  onChange={updateForm.handleChange}
                   value={updateForm.values.name}
                   id="name"
                   className='bold bg-slate-200 w-full mt-1 mb-3 py-2 px-3 rounded-md outline-none' />
@@ -58,7 +68,7 @@ const updatUser = () => {
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
-                  onChange={updateForm.handleSubmit}
+                  onChange={updateForm.handleChange}
                   value={updateForm.values.email}
                   id="email"
                   className='bold bg-slate-200 w-full mt-1 mb-3 py-2 px-3 rounded-md outline-none' />
@@ -66,7 +76,7 @@ const updatUser = () => {
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
-                  onChange={updateForm.handleSubmit}
+                  onChange={updateForm.handleChange}
                   value={updateForm.values.password}
                   id="password"
                   className='bold bg-slate-200 w-full mt-1 mb-3 py-2 px-3 rounded-md outline-none' />
@@ -74,7 +84,7 @@ const updatUser = () => {
                 <label htmlFor="city">City</label>
                 <input
                   type="text"
-                  onChange={updateForm.handleSubmit}
+                  onChange={updateForm.handleChange}
                   value={updateForm.values.city}
                   id="email"
                   className='bold bg-slate-200 w-full mt-1 mb-3 py-2 px-3 rounded-md outline-none' />
