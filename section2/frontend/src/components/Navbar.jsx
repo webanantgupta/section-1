@@ -76,7 +76,7 @@ const Navbar = () => {
                 className="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white"
                 href="#"
               >
-                Account
+                Manage Users
               </Link>
               <Link
                 className="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white"

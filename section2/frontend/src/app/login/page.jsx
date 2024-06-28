@@ -4,7 +4,12 @@ import classes from "./login.module.css";
 import { useFormik } from 'formik';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import useAppContext from '@/context/appContext';
 const Login = () => {
+
+  const router = useRouter();
+
+  const {setLoggedIn, setcurrentUser} = useAppContext();
 
   const loginForm = useFormik({
 
