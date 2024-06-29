@@ -1,7 +1,44 @@
+"use client"
+import useAppContext from '@/context/appContext';
 import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
+
+  const { loggedIn } = useAppContext();
+
+  const displayLoginOPtions = () => {
+    if (loggedIn) {
+      return (
+        <button onClick={logout} className='bg-red-400 px-4 py-2 text-white rounded-lg'>Logout</button>
+      )
+    } else {
+      return (
+        <Link
+          className="flex items-center gap-x-2 font-medium text-white/80 hover:text-white sm:border-s sm:border-white/30 py-2 md:py-0 sm:my-6 sm:ps-6"
+          href="/login"
+        >
+          <svg
+            className="flex-shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx={12} cy={7} r={4} />
+          </svg>
+          Log in
+        </Link>
+      )
+    }
+  }
+
   return (
     <>
       {/* ========== HEADER ========== */}
@@ -174,34 +211,14 @@ const Navbar = () => {
                   </a>
                 </div>
               </div>
-              <a
-                className="flex items-center gap-x-2 font-medium text-white/80 hover:text-white sm:border-s sm:border-white/30 py-2 md:py-0 sm:my-6 sm:ps-6"
-                href="/login"
-              >
-                <svg
-                  className="flex-shrink-0 size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={24}
-                  height={24}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                  <circle cx={12} cy={7} r={4} />
-                </svg>
-                Log in
-              </a>
+              {displayLoginOPtions()}
             </div>
           </div>
         </nav>
       </header>
       {/* ========== END HEADER ========== */}
       {/* ========== MAIN CONTENT ========== */}
-      
+
       {/* ========== END MAIN CONTENT ========== */}
     </>
 

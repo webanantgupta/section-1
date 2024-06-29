@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {/* to show in all the pages */}
 
-        <Navbar />
         <Toaster position="top-right" />
         <MantineProvider>
           {children}

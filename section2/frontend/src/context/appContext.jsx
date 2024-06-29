@@ -1,32 +1,32 @@
 "use client";
-import { useRouter } from "next/router";
-import { createContext, useState } from "react";
+import { useRouter } from "next/navigation";
+import { createContext, useContext, useState } from "react";
 
 
 
 
 const AppContext = createContext();
 
-export const AppProvider = ({children}) => {
+export const AppProvider = ({ children }) => {
 
     const router = useRouter();
-           
-     const [currentUser, setcurrentUser] = useState(
-        JSON.parse(localStorage.getItem("user")) || null 
-     );
 
-     const [loddedIn, setloddedIn] = useState(currentUser !== null);
+    const [currentUser, setcurrentUser] = useState(
+        JSON.parse(localStorage.getItem("user")) || null
+    );
 
-     const logout = () => {
+    const [loggedIn, setLoggedIn] = useState(currentUser !== null);
+
+    const logout = () => {
         localStorage.removeItem("user");
         //remove cookie
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
         setcurrentUser(null);
         setloggedIn(false);
         router.push("/login");
-     }
+    }
 
-    return <AppContext.Provider value={{currentUser, setcurrentUser, loggedIn , setloddedIn, logout}}>
+    return <AppContext.Provider value={{ currentUser, setcurrentUser, loggedIn, setLoggedIn, logout }}>
         {children}
     </AppContext.Provider>
 }
